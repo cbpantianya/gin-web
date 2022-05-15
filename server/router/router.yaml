@@ -1,0 +1,27 @@
+#Payattention to the name of handler, the name can't be repeated
+router:
+  # The name of the pre-router
+  - pre_router: "/api/v1/"
+    title: v1 API
+    description: This is the v1 API
+    version: 1.0.0
+    paths:
+      - router: "/ping"
+        gateway: "auth"
+        # Pay attention that the gateway setting is not effective in the group router
+        # base: Only Check the legality of the request
+        # auth: Need token in header and transfer to the user id or something else
+        # special: Only the user in the special group can access
+        # hard: Only the user in the super-admin group can access
+        method:
+          - GET:
+            - PingGetHandler
+            - AfterPingGetHandler
+      - router: "/oauth/vcode"
+        gateway: "base"
+        method:
+          - POST:
+            - VCodePostCheckHandler
+            - VCodePostHandler
+
+

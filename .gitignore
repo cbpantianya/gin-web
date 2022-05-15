@@ -1,1 +1,6 @@
 /server/config/config.toml
+/.idea/.gitignore
+/.idea/gin-template.iml
+/.idea/git_toolbox_prj.xml
+/.idea/modules.xml
+/.idea/vcs.xml

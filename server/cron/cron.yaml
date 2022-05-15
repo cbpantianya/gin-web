@@ -1,0 +1,3 @@
+- name: Test
+  main_func: out
+  schedule: "@every 60s"

@@ -1,0 +1,17 @@
+[Server]
+host = "localhost"
+port = "8080"
+
+[DataBase]
+    [DataBase.MySql]
+    host = "127.0.0.1"
+    port = "3306"
+    user = "root"
+    password = "******"
+    database = "local_test"
+    [DataBase.Redis]
+    host = "127.0.0.1"
+    port = "6379"
+    password = ""
+    database = 0
+
